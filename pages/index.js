@@ -1,12 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Layout from '../components/Layout'
 
 export default function HomePage() {
   return (
-    <div className='bg-blue-500'>
-      <h1 className="text-3xl font-bold underline">
+    <Layout className='bg-blue-500' title='devspace'>
+      <h1 className="text-3xl font-bold">
         Hello world!
       </h1>
-    </div>
+    </Layout>
   )
 }
