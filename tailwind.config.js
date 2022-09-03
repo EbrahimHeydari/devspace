@@ -5,11 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [
-    'bg-orange-400',
-    'bg-blue-400',
-    'bg-yellow-400',
-    'bg-violet-400',
-    'bg-red-400',
+    'bg-orange-500',
+    'bg-blue-500',
+    'bg-green-500',
+    'bg-violet-500',
+    'bg-red-500',
   ],
   theme: {
     extend: {},
