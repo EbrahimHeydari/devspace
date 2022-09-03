@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import CategoryLabel from "./CategoryLabel"
 
 const Post = ({ post }) => {
   return (
@@ -10,11 +11,11 @@ const Post = ({ post }) => {
         alt='cover'
         className='mb-4 rounded' />
 
-      <div class="flex justify-between items-center">
+      <div className="flex justify-between items-center">
         <span className="font-light text-gray-600">
           {post.frontmatter.date}
         </span>
-        <div>{post.frontmatter.category}</div>
+        <CategoryLabel>{post.frontmatter.category}</CategoryLabel>
       </div>
 
       <div className="mt-2">
