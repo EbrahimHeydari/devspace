@@ -24,7 +24,7 @@ const Pagination = ({ currentPage, numPages }) => {
         )}
 
         {Array.from({ length: numPages }, (_, index) => (
-          <Link href={`/blog/page/${index+ 1}`}>
+          <Link href={`/blog/page/${index+ 1}`} key={index}>
             <li className="relative py-2 px-3 block leading-tight bg-white border 
           border-gray text-gray-800 mr-1 hover:bg-gray-200 cursor-pointer">
               {index + 1}
