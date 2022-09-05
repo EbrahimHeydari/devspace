@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Layout from '@/components/Layout'
 import CategoryLabel from '@/components/CategoryLabel'
 import { marked } from 'marked'
+import { files } from '@/lib/posts'
 
 const PostPage = ({
   frontmatter: { title, category, date, cover_image, author, author_image },
@@ -43,8 +44,6 @@ const PostPage = ({
 export default PostPage
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join('posts'))
-
   const paths = files.map(filename => ({
     params: {
       slug: filename.replace('.md', '')

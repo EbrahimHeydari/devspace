@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
 p {
   margin: 15px 0;
   line-height: 1.8;
