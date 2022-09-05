@@ -17,11 +17,12 @@ const PostPage = ({
           <h1 className="text-5xl mb-7">{title}</h1>
           <CategoryLabel>{category}</CategoryLabel>
         </div>
-        <img src={cover_image} className='w-full rounded' />
+        <img src={cover_image} className='w-full rounded' alt='cover' />
 
         <div className="flex justify-between items-center rounded bg-gray-100 p-2 my-8">
           <div className="flex items-center">
             <img
+              alt='author'
               src={author_image}
               className="mx-4 w-10 h-10 object-full rounded-full hidden sm:block rounded-md" />
             <h4>{author}</h4>
