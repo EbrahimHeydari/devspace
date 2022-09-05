@@ -13,9 +13,7 @@ export default function BlogPage({ posts, numPages, currentPage, categories }) {
           <h1 className='text-5xl border-b-4 p-5 font-bold'>Blog</h1>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {posts.map((post, index) => (
-              <Post key={index} post={post} />
-            ))}
+            {posts.map((post, index) => <Post key={index} post={post} />)}
           </div>
 
           <Pagination numPages={numPages} currentPage={currentPage} />
@@ -50,6 +48,7 @@ export async function getStaticProps({ params }) {
   const numPages = Math.ceil(files.length / POST_PER_PAGE)
   const pageIndex = page - 1
   const posts = getPosts()
+
   const orderedPost = posts.slice(pageIndex * POST_PER_PAGE, page * POST_PER_PAGE)
 
   // Get Categories for side bar
