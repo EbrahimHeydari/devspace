@@ -11,7 +11,7 @@ export default (req, res) => {
   } else {
     const files = fs.readdirSync(path.join('posts'))
 
-    posts = files.map((filename) => {
+    posts = files.map(filename => {
       const slug = filename.replace('.md', '')
 
       const markdownWithMeta = fs.readFileSync(
